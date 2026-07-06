@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheetsheet</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rammetto+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav>
+        <span class="logo" ><img src="logo.png" alt="logo"></span>
+        <div>
+            This is Codding Cheet Sheet
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li>Javascript Basic code
+                <pre class="language-js"><code>
+                    var i = 45
+                </code></pre>
+            </li>
+            <li>Python Library Management system starter code
+                <pre class="language-py"><code>
+# Beginner Friendly Library Management System in Python using CRUD 
+
+book_list = {}
+
+print(f"{"_"*20} \n Instructions \n{"_"*20}")
+
+
+# adding book
+while True:
+req = input("Enter your choice (' list ' 'addone' 'addmany' 'check' 'delete' 'exit'): ").lower()
+if req == "list":
+    print(f"{"_"*20}\nBook List\n{"_"*20}")
+    for j in book_list.keys():
+        print(f"Book Name : {j} | {" "*(50-len(j))} Author : {book_list[j]["Author"]} ")
+
+elif(req=="addone"):
+    book_name = input(" Enter book name : ")
+    book_author  = input(" Enter author name : ")
+    no_of_book = int(input("Enter number of books : "))
+    book_list[book_name ] = {"Author":book_author, "Count":no_of_book}
+    print("Added Successfully, please type 'list' for you confirmation")
+
+# Adding many book
+
+elif(req=="addmany"):
+    while True:
+        book_name = input("Enter book name ( type 'exit' if you donot have any book left to add)")
+        if(book_name=="exit"):
+            break
+        else:
+            book_author = input(" Enter author name : ")
+            no_of_book = int(input("Enter number of books : "))
+            book_list[book_name ] = {"Author":book_author, "Count":no_of_book}
+
+# Deleting item
+
+elif(req=="delete"):
+    name = input("Enter book name : ")
+    book_list.pop(name)
+    print("Deleted successfully please type 'list' for you confirmation")
+
+# checking books
+
+elif (req == "check"):
+    name = input(" Enter the book name ")
+    if name in book_list.keys():
+        print(" Yes the book is there in the list")
+        print(book_list[name])
+    else:
+        print("Book NOT Found")
+
+# Going out of program
+elif(req=="exit"):
+    break
+else:
+    print("Invalid input\nTry again or type 'exit'")
+
+
+
+                </code></pre>
+            </li>
+            <li>CSS
+                <pre class="language-css"><code>
+nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color:rgb(6, 152, 224);
+    color:aliceblue;
+    padding:10px;
+    font-weight: 700;
+    font-size:xx-large;
+    font-family: "Rammetto One", sans-serif;
+    border:5px solid navy;
+    /* border-radius: 15px; */
+}
+                </code></pre>
+            </li>
+            <li>CPP Boiler Plate
+                <pre class="language-cpp"><code>
+#include< iostream >
+using namespace std;
+int main(){
+    cout<<"Hello World";
+    return 0;
+}
+                </code></pre>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
